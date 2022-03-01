@@ -1,0 +1,38 @@
+{
+	"compilerOptions": {
+		// TS code will be compiled down to ES5
+		"target": "es5",
+		// the type definitions of JS APIs that will be included
+		"lib": ["dom", "dom.iterable", "esnext"],
+		// allows JS files to imported and compiled instead of just .ts and .tsx files
+		"allowJs": true,
+		// skip typechecking of all declaration files
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		// enable strict type-checking behavior
+		"strict": true,
+		// Disallow inconsistently-cased references to the same file.
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		// specifies which module system to use - esnext module code will be generated in the output file
+		"module": "esnext",
+		// use Node.js' module resolution strategy
+		"moduleResolution": "node",
+		// this allows us to import .json files
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		// jsx will be converted to _jsx() calls (the new jsx transform allows you to use jsx without importing React)
+		"jsx": "react-jsx",
+		// generate .map file (source map) which is useful for debugging
+		"sourceMap": true,
+		// Report errors on unused locals
+		"noUnusedLocals": true,
+		// Report errors on unused parameters
+		"noUnusedParameters": true
+	},
+	// TS should type check every file in the src folder and in any of its sub-folders
+	"include": ["src/**/*"],
+	// TS will not type check files inside these folders
+	"exclude": ["node_modules", "dist"]
+}
